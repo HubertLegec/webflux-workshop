@@ -17,6 +17,15 @@ class WeatherResponse {
         this.windDirection = weather.getWindDirection();
     }
 
+    public WeatherResponse(Weather weather) {
+        this.humidity = weather.getHumidity();
+        this.maximumTemperature = weather.getMaximumTemperature();
+        this.minimumTemperature = weather.getMinimumTemperature();
+        this.airPressure = weather.getAirPressure();
+        this.windSpeed = weather.getWindSpeed();
+        this.windDirection = weather.getWindDirection();
+    }
+
     public Integer getHumidity() {
         return humidity;
     }
