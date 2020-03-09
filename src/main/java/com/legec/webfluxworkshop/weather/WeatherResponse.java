@@ -1,38 +1,43 @@
 package com.legec.webfluxworkshop.weather;
 
-import java.time.LocalDate;
-
 class WeatherResponse {
+    private final Integer humidity;
+    private final Float maximumTemperature;
+    private final Float minimumTemperature;
+    private final Integer airPressure;
+    private final Float windSpeed;
+    private final Float windDirection;
 
-    String getLocation() {
-        return null;
+    WeatherResponse(WeatherApi.Weather weather) {
+        this.humidity = weather.getHumidity();
+        this.maximumTemperature = weather.getMaximumTemperature();
+        this.minimumTemperature = weather.getMinimumTemperature();
+        this.airPressure = weather.getAirPressure();
+        this.windSpeed = weather.getWindSpeed();
+        this.windDirection = weather.getWindDirection();
     }
 
-    LocalDate getDate() {
-        return null;
+    public Integer getHumidity() {
+        return humidity;
     }
 
-    Integer getHumidity() {
-        return null;
+    public Float getMaximumTemperature() {
+        return maximumTemperature;
     }
 
-    Float getMaximumTemperature() {
-        return null;
+    public Float getMinimumTemperature() {
+        return minimumTemperature;
     }
 
-    Float getMinimumTemperature() {
-        return null;
+    public Integer getAirPressure() {
+        return airPressure;
     }
 
-    Integer getAirPressure() {
-        return null;
+    public Float getWindSpeed() {
+        return windSpeed;
     }
 
-    Float getWindSpeed() {
-        return null;
-    }
-
-    Float getWindDirection() {
-        return null;
+    public Float getWindDirection() {
+        return windDirection;
     }
 }

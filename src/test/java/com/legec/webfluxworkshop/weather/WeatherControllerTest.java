@@ -28,6 +28,7 @@ class WeatherControllerTest {
     void getWeatherForLocation() {
         // returns weather for Warsaw
         // if more than one location matches return weather for first on the list
+        // return only exact matches
 
     }
 }

@@ -22,7 +22,7 @@ class WeatherApiTest {
     @Test
     void fetchLocation() {
         StepVerifier.create(weatherApi.findLocation("Warsaw"))
-                .assertNext(l -> assertThat(l.getTitle()).isEqualTo("Warsaw"))
+                .assertNext(l -> assertThat(l.getLocation()).isEqualTo("Warsaw"))
                 .verifyComplete();
     }
 
@@ -30,7 +30,7 @@ class WeatherApiTest {
     void fetchWeatherForWarsaw() {
         StepVerifier.create(weatherApi.weatherForLocation(523920))
                 .assertNext(l -> {
-                    assertThat(l.getTitle()).isEqualTo("Warsaw");
+                    assertThat(l.getLocation()).isEqualTo("Warsaw");
                     assertThat(l.getConsolidatedWeather()).isNotEmpty();
                 })
                 .verifyComplete();

@@ -41,7 +41,7 @@ class WeatherApi {
     @JsonIgnoreProperties(ignoreUnknown = true)
     static class Location {
         @JsonProperty("title")
-        private String title;
+        private String location;
         @JsonProperty("location_type")
         private String locationType;
         @JsonProperty("latt_long")
@@ -52,15 +52,15 @@ class WeatherApi {
         public Location() {
         }
 
-        Location(String title, String locationType, String latitudeLongitude, int id) {
-            this.title = title;
+        Location(String location, String locationType, String latitudeLongitude, int id) {
+            this.location = location;
             this.locationType = locationType;
             this.latitudeLongitude = latitudeLongitude;
             this.id = id;
         }
 
-        String getTitle() {
-            return title;
+        String getLocation() {
+            return location;
         }
 
         String getLocationType() {
